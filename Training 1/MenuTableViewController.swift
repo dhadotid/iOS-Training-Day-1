@@ -122,8 +122,17 @@ class MenuTableViewController: UITableViewController {
             let nama = datas["menu_nama"]
             let harga = datas["menu_harga"]
             let urlGambar = datas["menu_gambar"]
+            let id = datas["menu_id"]
             
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let tujuan = storyboard.instantiateViewController(identifier: "EditMenu") as EditMenuViewController
             
+            tujuan.strNama = nama
+            tujuan.strHarga = harga
+            tujuan.strUrlGambar = urlGambar
+            tujuan.id = id
+            
+            self.show(tujuan, sender: self)
         }
         
         //LITTERAL untuk color picker

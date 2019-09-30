@@ -1,5 +1,5 @@
 //
-//  EditMenuViewController.swift
+//  RegisterViewController.swift
 //  Training 1
 //
 //  Created by yudha on 30/09/19.
@@ -10,30 +10,24 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class EditMenuViewController: UIViewController {
+class RegisterViewController: UIViewController {
 
-    @IBOutlet weak var tfName: UITextField!
-    @IBOutlet weak var tfHarga: UITextField!
-    @IBOutlet weak var tfUrlGambar: UITextField!
-    @IBOutlet weak var ivImageMenu: UIImageView!
+    @IBOutlet weak var tfNama: UITextField!
+    @IBOutlet weak var tfEmail: UITextField!
+    @IBOutlet weak var tfPassword: UITextField!
+    @IBOutlet weak var tfHp: UITextField!
     
-    //setter & getter
-    var strNama: String?
-    var strHarga: String?
-    var strUrlGambar: String?
-    var id: String?
-    
-    @IBAction func btnEditData(_ sender: Any) {
-        let url = "http://192.168.64.2/server_resto_ios/index.php/Api/updateMakanan"
+    @IBAction func btnRegister(_ sender: Any) {
+        let url = "http://192.168.64.2/server_resto_ios/index.php/Api/register"
         
-        if tfName.text == "" || tfHarga.text == "" || tfUrlGambar.text == "" {
+        if tfNama.text == "" || tfEmail.text == "" || tfPassword.text == "" || tfHp.text == "" {
             //tampilkan alert
             showAlert(title: "Infor", message: "Tidak boleh kosong")
         }else{
-            let params: [String: String] = ["name" : tfName.text!,
-                                            "price" : tfHarga.text!,
-                                            "gambar" : tfUrlGambar.text!,
-                                            "id" : id!]
+            let params: [String: String] = ["name" : tfNama.text!,
+                                            "email" : tfEmail.text!,
+                                            "password" : tfPassword.text!,
+            "hp" : tfHp.text!]
             
             Alamofire.request(url, method: .post, parameters: params, encoding: URLEncoding.httpBody, headers: nil).responseJSON{ (responseInsert) in
                 let allJson = JSON(responseInsert.result.value as Any)
@@ -53,15 +47,7 @@ class EditMenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        tfName.text = strNama
-        tfHarga.text = strHarga
-        tfUrlGambar.text = strUrlGambar
-        print(id)
-        
-        Alamofire.request(strUrlGambar!).responseJSON{ (getGambar) in
-            let dataGambar = getGambar.data
-            self.ivImageMenu.image = UIImage(data: dataGambar!)
-        }
+        // Do any additional setup after loading the view.
     }
     
     func showAlert(title: String, message: String){

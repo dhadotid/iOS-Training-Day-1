@@ -16,6 +16,8 @@
 		15E265082341B13E00582CD9 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E265072341B13E00582CD9 /* MenuTableViewController.swift */; };
 		15E2650A2341B1AF00582CD9 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E265092341B1AF00582CD9 /* MenuTableViewCell.swift */; };
 		15E2650C2341E99800582CD9 /* EditMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E2650B2341E99800582CD9 /* EditMenuViewController.swift */; };
+		15E2650E2342011700582CD9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E2650D2342011700582CD9 /* LoginViewController.swift */; };
+		15E265102342012500582CD9 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E2650F2342012500582CD9 /* RegisterViewController.swift */; };
 		1AC1D9F30C22D6E67C26CD2B /* Pods_Training_1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A742E9363F45A58DB79445B5 /* Pods_Training_1.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +33,8 @@
 		15E265072341B13E00582CD9 /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		15E265092341B1AF00582CD9 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		15E2650B2341E99800582CD9 /* EditMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMenuViewController.swift; sourceTree = "<group>"; };
+		15E2650D2342011700582CD9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		15E2650F2342012500582CD9 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		2A09FB8C79C5C197BE43DCBD /* Pods-Training 1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Training 1.release.xcconfig"; path = "Target Support Files/Pods-Training 1/Pods-Training 1.release.xcconfig"; sourceTree = "<group>"; };
 		3989BC4B15560F40E7802E05 /* Pods-Training 1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Training 1.debug.xcconfig"; path = "Target Support Files/Pods-Training 1/Pods-Training 1.debug.xcconfig"; sourceTree = "<group>"; };
 		A742E9363F45A58DB79445B5 /* Pods_Training_1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Training_1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,6 +83,8 @@
 				15E265072341B13E00582CD9 /* MenuTableViewController.swift */,
 				15E265092341B1AF00582CD9 /* MenuTableViewCell.swift */,
 				15E2650B2341E99800582CD9 /* EditMenuViewController.swift */,
+				15E2650D2342011700582CD9 /* LoginViewController.swift */,
+				15E2650F2342012500582CD9 /* RegisterViewController.swift */,
 			);
 			path = "Training 1";
 			sourceTree = "<group>";
@@ -215,8 +221,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15E2650E2342011700582CD9 /* LoginViewController.swift in Sources */,
 				15E265082341B13E00582CD9 /* MenuTableViewController.swift in Sources */,
 				15E264F82341ADD600582CD9 /* InsertMenuViewController.swift in Sources */,
+				15E265102342012500582CD9 /* RegisterViewController.swift in Sources */,
 				15E264F42341ADD600582CD9 /* AppDelegate.swift in Sources */,
 				15E264F62341ADD600582CD9 /* SceneDelegate.swift in Sources */,
 				15E2650A2341B1AF00582CD9 /* MenuTableViewCell.swift in Sources */,
