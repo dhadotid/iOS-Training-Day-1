@@ -65,7 +65,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2742.0289855072465" y="130.58035714285714"/>
+            <point key="canvasLocation" x="2539" y="131"/>
         </scene>
         <!--Home-->
         <scene sceneID="FiG-Ev-DZo">
@@ -138,12 +138,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XDC-ct-R4A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1902.8985507246377" y="130.58035714285714"/>
+            <point key="canvasLocation" x="1700" y="131"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Q6P-gG-Add">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HyA-sM-oeO" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="homeStory" automaticallyAdjustsScrollViewInsets="NO" id="HyA-sM-oeO" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vxR-7q-oUC">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -223,9 +223,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lug-W1-Fbg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3557.971014492754" y="130.58035714285714"/>
+            <point key="canvasLocation" x="3355" y="131"/>
         </scene>
-        <!--Login View Controller-->
+        <!--Login-->
         <scene sceneID="Vpv-US-f56">
             <objects>
                 <viewController id="OtR-iG-t4n" customClass="LoginViewController" customModule="Training_1" customModuleProvider="target" sceneMemberID="viewController">
@@ -250,6 +250,9 @@
                                         <rect key="frame" x="0.0" y="120" width="179" height="30"/>
                                         <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Login"/>
+                                        <connections>
+                                            <action selector="btnLogin:" destination="OtR-iG-t4n" eventType="touchUpInside" id="6BP-hd-vgD"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dRm-V2-G4B">
                                         <rect key="frame" x="0.0" y="176" width="179" height="30"/>
@@ -270,11 +273,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IDr-9R-ZAi"/>
                     </view>
-                    <navigationItem key="navigationItem" id="k70-fV-N3W"/>
+                    <navigationItem key="navigationItem" title="Login" id="k70-fV-N3W"/>
+                    <connections>
+                        <outlet property="tfEmail" destination="hRX-9z-PYF" id="Q8n-iQ-1yh"/>
+                        <outlet property="tfPassword" destination="Asj-Eq-FIF" id="iMk-hf-l9i"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kCM-4A-Lf4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2826.0869565217395" y="775.44642857142856"/>
+            <point key="canvasLocation" x="2623" y="775"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="Xhq-3z-J6T">
@@ -341,7 +348,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0p9-uv-wMp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3813.04347826087" y="775.44642857142856"/>
+            <point key="canvasLocation" x="3610" y="775"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ii1-Il-gFs">
@@ -359,7 +366,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xI7-40-Z1w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1915.9420289855075" y="775.44642857142856"/>
+            <point key="canvasLocation" x="1713" y="775"/>
         </scene>
     </scenes>
 </document>

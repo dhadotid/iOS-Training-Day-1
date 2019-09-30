@@ -24,10 +24,7 @@ class RegisterViewController: UIViewController {
             //tampilkan alert
             showAlert(title: "Infor", message: "Tidak boleh kosong")
         }else{
-            let params: [String: String] = ["name" : tfNama.text!,
-                                            "email" : tfEmail.text!,
-                                            "password" : tfPassword.text!,
-            "hp" : tfHp.text!]
+            let params: [String: String] = ["name" : tfNama.text!, "email" : tfEmail.text!, "password" : tfPassword.text!, "hp" : tfHp.text!]
             
             Alamofire.request(url, method: .post, parameters: params, encoding: URLEncoding.httpBody, headers: nil).responseJSON{ (responseInsert) in
                 let allJson = JSON(responseInsert.result.value as Any)
