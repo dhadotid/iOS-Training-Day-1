@@ -129,6 +129,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Home" id="8vL-9L-XMm">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="4dX-eh-iGJ">
+                            <connections>
+                                <action selector="btnLogout:" destination="oRO-x6-t7C" id="6s1-ke-HEX"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Jie-RD-vqb">
                             <connections>
                                 <segue destination="BYZ-38-t0r" kind="show" id="ITb-4t-8CZ"/>
@@ -353,7 +358,7 @@
         <!--Navigation Controller-->
         <scene sceneID="ii1-Il-gFs">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KR2-qo-tUr" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="loginStory" automaticallyAdjustsScrollViewInsets="NO" id="KR2-qo-tUr" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="T0z-OS-OKA">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>

@@ -14,8 +14,22 @@ class MenuTableViewController: UITableViewController {
 
     var data = [[String : String]]()
     
+    var user : UserDefaults?
+    
+    @IBAction func btnLogout(_ sender: Any) {
+        self.user?.removeObject(forKey: "data_email")
+        self.user?.removeObject(forKey: "data_hp")
+        self.user?.removeObject(forKey: "status_login")
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let tujuan = storyboard.instantiateViewController(identifier: "loginStory")
+        tujuan.modalPresentationStyle = .fullScreen
+        self.show(tujuan, sender: self)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        user = UserDefaults.standard
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

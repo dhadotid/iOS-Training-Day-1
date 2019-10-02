@@ -25,7 +25,7 @@ class LoginViewController: UIViewController {
         let email = user?.string(forKey: "data_email")
         let hp = user?.string(forKey: "data_hp")
         
-        if email?.count != 0 && hp?.count != 0 {
+        if (user?.bool(forKey: "status_login"))! {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let tujuan = storyboard.instantiateViewController(identifier: "homeStory")
             tujuan.modalPresentationStyle = .fullScreen
@@ -54,8 +54,9 @@ class LoginViewController: UIViewController {
                     let email = data["user_email"].stringValue
                     let hp = data["user_hp"].stringValue
                     
-                    self.user?.setValue(email, forKey: "data_email")
-                    self.user?.setValue(hp, forKey: "data_hp")
+                    self.user?.set(email, forKey: "data_email")
+                    self.user?.set(hp, forKey: "data_hp")
+                    self.user?.set(true, forKey: "status_login")
                     
                     let storyboard = UIStoryboard(name: "Main", bundle: nil)
                     let tujuan = storyboard.instantiateViewController(identifier: "homeStory")
